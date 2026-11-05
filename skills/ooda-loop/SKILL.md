@@ -3,7 +3,7 @@ name: ooda-loop
 description: "OODA loop for website performance, scalability, cost, errors, and outages: Observe, Orient, Decide (pause for approval), Act, verify, repeat. Use for ooda-loop, incidents, latency, throughput, capacity, or cloud spend."
 ---
 
-# OODA loop — website systems
+# OODA loop: website systems
 
 Loop **Observe → Orient → Decide → (pause) → Act → Observe** until the objective is met or the user stops. Never skip a phase.
 
@@ -17,7 +17,7 @@ Before starting, pin one measurable objective the user owns (e.g. "p95 < 300 ms 
 
 Collect real, dated, sourced data covering the objective: latency, errors, saturation, traffic, queue depth, spend, alerts, traces, recent changes. Use MCPs, vendor CLIs/APIs, observability tools, or local logs. Never invent numbers; docs and architecture reasoning alone don't count.
 
-**Data gate:** if you can't read live or exported signals, stop and ask for access by name — MCP/API/CLI for cloud systems, logs/tracing for local ones.
+**Data gate:** if you can't read live or exported signals, stop and ask for access by name: MCP/API/CLI for cloud systems, logs/tracing for local ones.
 
 ## 2. Orient
 
@@ -29,13 +29,13 @@ Summarize, separating fact, inference, and unknown:
 - Blind spots
 - The dominant constraint: latency, errors, capacity, or cost
 
-## 3. Decide — then pause
+## 3. Decide, then pause
 
 Propose **one** action, preferring the smallest reversible experiment that tests the Orient picture:
 
 - **Action**
-- **Hypothesis** — which metric improves, by how much
-- **Invalidation** — what result means abort
+- **Hypothesis**: which metric improves, by how much
+- **Invalidation**: what result means abort
 - **Risk / rollback**
 - **Tradeoffs** across perf, scale, cost, and reliability
 
@@ -54,10 +54,10 @@ Do only the approved action. Capture before/after on the Decide metrics, judge t
 ## Report (each cycle)
 
 ```markdown
-## OODA cycle N — [objective]
+## OODA cycle N: [objective]
 - Observe: facts (source, window), gaps
 - Orient: situation, dominant constraint, blind spots
-- Decide: action / hypothesis / invalidation / risk / tradeoffs — approved | amended | rejected
+- Decide: action / hypothesis / invalidation / risk / tradeoffs (approved | amended | rejected)
 - Act: what ran, metric deltas, outcome, side effects / rollback
 - Next: loop | stop | need decision on …
 ```
